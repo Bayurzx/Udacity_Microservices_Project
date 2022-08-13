@@ -5,11 +5,14 @@
 
 # Step 1:
 # Create dockerpath
-# dockerpath=<your docker ID/path>
+dockerpath="bayurzx/microserviceml:v1.0.0"
+echo -e "Your docker path is ${dockerpath} \n" 
 
 # Step 2:  
 # Authenticate & tag
-echo "Docker ID and Image: $dockerpath"
+docker login
+docker tag microserviceml ${dockerpath}
 
 # Step 3:
 # Push image to a docker repository
+docker push ${dockerpath}
