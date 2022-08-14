@@ -4,7 +4,7 @@
 
 # Step 1:
 # This is your Docker ID/path
-dockerpath="bayurzx/microserviceml:v1.0.0"
+dockerpath="bayurzxsmtp/microserviceml:v1.0.0"
 echo "This is your Docker ID/path: ${dockerpath}"
 
 # Step 2
@@ -17,7 +17,20 @@ kubectl run microproject --image=$dockerpath --port=80 --labels app=microservice
 echo -e "\nList kubernetes pods"
 kubectl get po
 
+echo -e "\nSleep for 1min"
+sleep 1m
+
+echo -e "\nList kubernetes pods"
+kubectl get po
+
 # Step 4:
 # Forward the container port to a host
-echo -e "\nForward the container port to a host"
-kubectl port-forward microproject 8000:80
+echo -e "\nForward the container port to a localhost at port 8001"
+kubectl port-forward microproject 8001:80
+
+# Make the prediction
+echo -e "Running the prediction script here\n"
+./make_prediction2.sh
+
+
+kubectl cp microproject:output_txt_files/kubernetes_out.txt output_txt_files/kubernetes_out.txt

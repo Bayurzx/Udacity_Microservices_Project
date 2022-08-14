@@ -30,4 +30,4 @@ sleep 30s
 
 # Remember to add command to copy the docker_out.txt file
 echo -e "Copying docker_out.txt from the running container \n"
-docker cp $(docker ps | awk 'NR>1 {print $1, $2}' | grep "microserviceml" | awk '{print $1}'):/app/output_txt_files/docker_out.json ./output_txt_files/docker_out.txt
+docker cp $(docker ps | awk 'NR>1 {print $1, $2}' | grep "microserviceml" | awk '{print $1}'):/app/output_txt_files/docker_out.txt ./output_txt_files/docker_out.txt

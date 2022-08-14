@@ -5,7 +5,7 @@
 
 # Step 1:
 # Create dockerpath
-dockerpath="bayurzx/microserviceml:v1.0.0"
+dockerpath="bayurzxsmtp/microserviceml:v1.0.0"
 echo -e "Your docker path is ${dockerpath} \n" 
 
 # Step 2:  

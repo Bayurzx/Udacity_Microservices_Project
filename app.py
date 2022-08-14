@@ -66,7 +66,11 @@ def predict():
     # TO DO:  Log the output prediction value
     LOG.info(f"prediction value is: \n {prediction}")
     # Write it out in docker_out file i copied into docker
-    with open('/app/output_txt_files/docker_out.json', 'w') as f:
+    with open('/app/output_txt_files/docker_out.txt', 'w') as f:
+        json.dump(prediction, f)
+
+    # Write it out in kubernetes_out file i copied into container
+    with open('output_txt_files/kubernetes_out.txt', 'w') as f:
         json.dump(prediction, f)
 
     return jsonify({'prediction': prediction})
