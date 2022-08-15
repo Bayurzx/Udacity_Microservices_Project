@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![Bayurzx](https://circleci.com/gh/Bayurzx/Udacity_Microservices_Project.svg?style=svg)](https://app.circleci.com/pipelines/github/Bayurzx/Udacity_Microservices_Project)
 
 ## Project Overview
 

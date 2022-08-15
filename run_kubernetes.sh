@@ -26,11 +26,16 @@ kubectl get po
 # Step 4:
 # Forward the container port to a host
 echo -e "\nForward the container port to a localhost at port 8001"
-kubectl port-forward microproject 8001:80
+kubectl port-forward microproject 8001:80 &
+
+echo -e "\nSleep for 1min"
+sleep 1m
 
 # Make the prediction
 echo -e "Running the prediction script here\n"
 ./make_prediction2.sh
 
+echo -e "\nSleep for 1min"
+sleep 1m
 
 kubectl cp microproject:output_txt_files/kubernetes_out.txt output_txt_files/kubernetes_out.txt
