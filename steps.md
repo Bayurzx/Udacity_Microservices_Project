@@ -16,7 +16,7 @@ wget -O /bin/hadolint https://github.com/hadolint/hadolint/releases/download/v2.
 chmod +x /bin/hadolint
 ```
 - run `make lint` to run lint checks on source code
-![make lint](project\screenshots\make_lint.jpg)
+![make lint](https://raw.githubusercontent.com/Bayurzx/Udacity_Microservices_Project/master/screenshots/make_lint.jpg)
 
 ### Docker
 - I was using Docker Desktop to run my docker commands on linux Subsystem and Windows after numerous issue pulling my image from the hub with kubernetes, I decided to use a remote machine with the advantage of network speed
@@ -56,12 +56,12 @@ In order to run a containerized application, you’ll need to build and run the 
     - Ran `docker cp ...` command to copy the log file '`docker_out.txt`' I automated in the `app.py` file
 - Running the complete script:
   - run `./run_docker.sh`
-![make prediction](project\screenshots\make_prediction.jpg)
+![make prediction](https://raw.githubusercontent.com/Bayurzx/Udacity_Microservices_Project/master/screenshots/make_prediction.jpg)
 
 ## Task 3: Improve Logging & Save Output
 - Added the command to log prediction in app.py
   - I will use `docker cp` to retrieve it
-![make prediction](project\screenshots\make_prediction2.jpg)
+![make prediction](https://raw.githubusercontent.com/Bayurzx/Udacity_Microservices_Project/master/screenshots/make_prediction2.jpg)
 
 ## Task 4: Upload the Docker Image
 - Upload your Docker image with the `upload_docker.sh`
@@ -69,7 +69,7 @@ In order to run a containerized application, you’ll need to build and run the 
     - Recall that your docker username is your unique docker ID.
   - Authenticate and tag image `aka` `docker login` and `docker tag` `<image>`
   - push your docker image `docker push --[OPTIONS] NAME[:TAG]`
-![running docker](project\screenshots\run_docker_pass.jpg)
+![running docker](https://raw.githubusercontent.com/Bayurzx/Udacity_Microservices_Project/master/screenshots/run_docker_pass.jpg)
 
 ## Task 5: Configure Kubernetes to Run Locally
 We already installed minikube and kubectl so we are good to go
